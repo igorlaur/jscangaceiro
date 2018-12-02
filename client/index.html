@@ -62,10 +62,17 @@
     <script>
         
         var n1 = new Negociacao(new Date(), 5, 700);
-        console.log(n1.quantidade);
+        // Congela o valor de N1, não conseguindo modificar
+        
         console.log(n1.data);
-        console.log(n1.valor);
-        console.log(n1.volume);
+        var outroDia = new Date();
+
+        // setDate permite alterar o dia de uma data
+        n1.data.setDate(17);
+        n1.data = outroDia;
+        
+        console.log(n1.data);
+        
     </script>
 </body>
 </html>

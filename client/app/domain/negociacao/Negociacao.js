@@ -5,6 +5,7 @@ class Negociacao {
         this._data = data;
         this._quantidade = quantidade;
         this._valor = valor;
+        Object.freeze(this); // Congelo os valores
     }
 
     get volume() {
@@ -21,6 +22,10 @@ class Negociacao {
 
     get valor(){
         return this._valor;
+    }
+
+    get outroDia(){
+        return this._outroDia != _data;
     }
 }
 
