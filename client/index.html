@@ -61,15 +61,14 @@
     <script src="app/domain/negociacao/Negociacao.js"></script>
     <script>
         
-        var n1 = new Negociacao(new Date(), 5, 700);
+        var hoje = new Date();
+        var n1 = new Negociacao(hoje, 5, 700);
         // Congela o valor de N1, não conseguindo modificar
         
         console.log(n1.data);
-        var outroDia = new Date();
 
         // setDate permite alterar o dia de uma data
-        n1.data.setDate(17);
-        n1.data = outroDia;
+        hoje.setDate(21);
         
         console.log(n1.data);
         

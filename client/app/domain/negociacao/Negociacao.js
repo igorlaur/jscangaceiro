@@ -10,10 +10,11 @@ class Negociacao {
 
     get volume() {
         return this._quantidade * this._valor;
-        }
+    }
 
     get data() {
-        return this._data;
+        // O getTime() de uma data retornará um número long com uma representação da data
+        return new Date(this._data.getTime());
     }
     
     get quantidade(){
